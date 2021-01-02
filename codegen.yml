@@ -1,0 +1,16 @@
+overwrite: true
+documents: null
+generates:
+  src/generated/graphql.ts:
+    schema: "./src/typeDefs/*.ts"
+    plugins:
+      - "typescript"
+      # - "typescript-operations"
+      - "typescript-resolvers"
+    config:
+      defaultMapper: Partial<{T}>
+      useIndexSignature: true
+      avoidOptionals: false
+      noSchemaStitching: false
+      typesPrefix: I
+      contextType: ../types/context#CustomContext
