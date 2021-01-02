@@ -10,3 +10,9 @@ typings/
 
 # Node.js dependency directory
 node_modules/
+
+# ignore log file
+**/*.log
+
+# build directory
+lib/
